@@ -1,0 +1,66 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para la galería */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Estilo para los elementos de la galería */
+.gallery-item {
+    flex: 1 1 calc(33.333% - 20px); /* Tres columnas con espacio entre ellos */
+    box-sizing: border-box;
+}
+
+/* Asegúrate de que las imágenes se ajusten al contenedor */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Pantalla Extra Large (>=1200px) */
+@media (min-width: 1200px) {
+    .gallery-item {
+        flex: 1 1 calc(33.333% - 20px); /* Tres columnas */
+    }
+}
+
+/* Pantalla Large (>=992px) y <1200px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .gallery-item {
+        flex: 1 1 calc(33.333% - 20px); /* Tres columnas */
+    }
+}
+
+/* Pantalla Medium (>=768px) y <992px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .gallery-item {
+        flex: 1 1 calc(50% - 20px); /* Dos columnas */
+    }
+}
+
+/* Pantalla Small (>=576px) y <768px */
+@media (min-width: 576px) and (max-width: 767px) {
+    .gallery-item {
+        flex: 1 1 calc(50% - 20px); /* Dos columnas */
+    }
+}
+
+/* Pantalla Extra Small (<576px) */
+@media (max-width: 575px) {
+    .gallery-item {
+        flex: 1 1 100%; /* Una columna */
+    }
+}
